@@ -27,7 +27,7 @@ export default function Footer() {
             <Cpu size={20} />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} ProjectHub CSE Support. All rights reserved.</p>
+        <p>&copy; ProjectHub. All rights reserved.</p>
         <p className="text-sm mt-2 font-mono">Designed for Next-Gen Engineers.</p>
       </div>
     </footer>
