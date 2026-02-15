@@ -2,17 +2,9 @@ import { useState } from "react"
 import axios from "axios"
 import { Send, MessageSquare, CheckCircle2 } from "lucide-react"
 
-const PROJECT_TYPES = [
-  "Custom System Development",
-  "Demo Project & Explanation",
-  "Report & Documentation",
-  "Bug Fixing / Debugging",
-]
-
 const INITIAL = {
   name: "",
   email: "",
-  projectType: "Custom System Development",
   message: "",
 }
 
@@ -106,20 +98,6 @@ export default function Contact() {
                   setFormData({ ...formData, email: e.target.value })
                 }
               />
-              <select
-                name="projectType"
-                className="w-full bg-slate-950 border border-slate-800 text-slate-400 p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all"
-                value={formData.projectType}
-                onChange={(e) =>
-                  setFormData({ ...formData, projectType: e.target.value })
-                }
-              >
-                {PROJECT_TYPES.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
               <textarea
                 name="message"
                 placeholder="Tell us about your project idea..."
