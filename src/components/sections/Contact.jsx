@@ -12,7 +12,6 @@ const PROJECT_TYPES = [
 const INITIAL = {
   name: "",
   email: "",
-  uni: "",
   projectType: "Custom System Development",
   message: "",
 }
@@ -82,33 +81,21 @@ export default function Contact() {
                   </div>
                   <span>WhatsApp: +880 1959-540486</span>
                 </div>
-              </div>
+              </div> 
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  required
-                  className="bg-slate-950 border border-slate-800 text-white p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                />
-                <input
-                  type="text"
-                  name="university"
-                  placeholder="University"
-                  className="bg-slate-950 border border-slate-800 text-white p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all"
-                  value={formData.uni}
-                  onChange={(e) =>
-                    setFormData({ ...formData, uni: e.target.value })
-                  }
-                />
-              </div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+                className="w-full bg-slate-950 border border-slate-800 text-white p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+              />
               <input
                 type="email"
                 name="email"
