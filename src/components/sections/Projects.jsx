@@ -145,7 +145,7 @@ export default function Projects() {
             href="#contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 hover:text-white hover:border-indigo-500/50 hover:bg-slate-800/80 transition-all font-medium"
           >
-            Explore All 50+ Projects
+            50+ Projects, let's contact us for more details
             <ExternalLink className="w-4 h-4" />
           </a>
         </MotionDiv>

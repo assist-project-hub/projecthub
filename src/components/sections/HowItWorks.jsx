@@ -22,7 +22,7 @@ const STEPS = [
     desc: "Helping with diagrams and report structure.",
   },
   {
-    title: "Defense Support",
+    title: "Support",
     desc: "Final viva prep to help you secure an A+.",
   },
 ]

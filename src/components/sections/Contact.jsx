@@ -74,13 +74,13 @@ export default function Contact() {
                   <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-indigo-400">
                     <Send size={18} />
                   </div>
-                  <span>support@projecthub.edu</span>
+                  <span>assist.projecthub@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-4 text-slate-300">
                   <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-indigo-400">
                     <MessageSquare size={18} />
                   </div>
-                  <span>WhatsApp: +880 17XX-XXXXXX</span>
+                  <span>WhatsApp: +880 1959-540486</span>
                 </div>
               </div>
             </div>

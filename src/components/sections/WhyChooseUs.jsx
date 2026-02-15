@@ -8,7 +8,7 @@ const POINTS = [
   "Confidentiality and plagiarism-free work",
   "Clear code and documentation you can explain in viva",
   "Affordable pricing for students",
-  "Support until defense—not just submission",
+  "Support until delivery",
 ]
 
 export default function WhyChooseUs() {
