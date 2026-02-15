@@ -102,9 +102,10 @@ export default function Contact() {
               />
               <textarea
                 name="message"
-                placeholder="Tell us about your project idea..."
+                placeholder="Tell us about your project idea(max 500 characters)..."
                 rows={4}
                 required
+                maxLength={500}
                 className="w-full bg-slate-950 border border-slate-800 text-white p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all resize-none"
                 value={formData.message}
                 onChange={(e) =>
