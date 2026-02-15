@@ -17,17 +17,17 @@ export default function Contact() {
   const [formData, setFormData] = useState(INITIAL)
   const [loading, setLoading] = useState(false)
   const [sent, setSent] = useState(false)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(null) // null = no error, "config" = missing Formspree ID, "network" = request failed
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
     setSent(false)
-    setError(false)
+    setError(null)
 
     if (!FORMSPREE_ENDPOINT) {
       setLoading(false)
-      setError(true)
+      setError("config")
       return
     }
 
@@ -38,8 +38,9 @@ export default function Contact() {
       setSent(true)
       setFormData(INITIAL)
       setTimeout(() => setSent(false), 5000)
-    } catch {
-      setError(true)
+    } catch (err) {
+      console.error("Contact form error:", err?.response?.data ?? err.message ?? err)
+      setError("network")
     } finally {
       setLoading(false)
     }
@@ -91,7 +92,8 @@ export default function Contact() {
               <input
                 type="email"
                 name="email"
-                placeholder="Your email (optional)"
+                required
+                placeholder="Your email"
                 className="w-full bg-slate-950 border border-slate-800 text-white p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all"
                 value={formData.email}
                 onChange={(e) =>
@@ -109,9 +111,14 @@ export default function Contact() {
                   setFormData({ ...formData, message: e.target.value })
                 }
               />
-              {error && (
+              {error === "config" && (
                 <p className="text-sm text-amber-400">
-                  Something went wrong. Please try again later.
+                  Form is not configured. Add VITE_FORMSPREE_FORM_ID to your .env file (get the ID from formspree.io).
+                </p>
+              )}
+              {error === "network" && (
+                <p className="text-sm text-amber-400">
+                  Something went wrong. Please check your connection and try again, or email us directly.
                 </p>
               )}
               <button
