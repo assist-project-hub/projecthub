@@ -21,7 +21,7 @@ export default [
     tech: ["React", "Next.js", "Tailwind"],
     description: "Kanban-style task board with drag-and-drop, filters, and real-time updates.",
     imageUrl: "https://placehold.co/600x340/e0e7ff/4f46e5?text=Task+Dashboard",
-    demoUrl: "https://task-management-com.vercel.app/login",
+    demoUrl: "https://task-management-com.vercel.app/",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export default [
     tech: ["Vue.js", "Node.js", "Express", "MongoDB"],
     description: "Book and manage doctor appointments with email reminders and slot availability.",
     imageUrl: "https://placehold.co/600x340/e0e7ff/4f46e5?text=Appointment+System",
-    demoUrl: "https://inventory-management-com.vercel.app/login",
+    demoUrl: "https://inventory-management-com.vercel.app/",
   },
   {
     id: 5,
