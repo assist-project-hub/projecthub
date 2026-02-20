@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Menu, X, Terminal } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { content } from "../../data/content"
 
 const SECTIONS = [
   { name: "Services", href: "#services" },
@@ -51,7 +52,7 @@ export default function Navbar() {
             href="#contact"
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all"
           >
-            Get Started
+            {content.nav.cta}
           </a>
         </div>
 
@@ -89,7 +90,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="text-indigo-400 font-semibold"
               >
-                Get Started
+                {content.nav.cta}
               </a>
             </div>
           </motion.div>

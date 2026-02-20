@@ -5,6 +5,7 @@ import { Send, MessageSquare, CheckCircle2 } from "lucide-react"
 const INITIAL = {
   name: "",
   email: "",
+  phone: "",
   message: "",
 }
 
@@ -98,6 +99,16 @@ export default function Contact() {
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
+                }
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                className="w-full bg-slate-950 border border-slate-800 text-white p-4 rounded-xl focus:outline-none focus:border-indigo-500 transition-all"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
                 }
               />
               <textarea

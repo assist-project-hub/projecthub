@@ -1,4 +1,5 @@
 import { Globe, Layout, Cpu } from "lucide-react"
+import { content } from "../../data/content"
 
 export default function Footer() {
   return (
@@ -28,7 +29,7 @@ export default function Footer() {
           </a>
         </div>
         <p>&copy; ProjectHub. All rights reserved.</p>
-        <p className="text-sm mt-2 font-mono">Designed for Next-Gen Engineers.</p>
+        <p className="text-sm mt-2 font-mono">{content.footer.tagline}</p>
       </div>
     </footer>
   )

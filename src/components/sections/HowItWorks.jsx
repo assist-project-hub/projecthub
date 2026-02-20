@@ -1,43 +1,19 @@
 import SectionTitle from "../ui/SectionTitle"
+import { content } from "../../data/content"
 
-const STEPS = [
-  {
-    title: "Consultation",
-    desc: "Share your project requirements and idea.",
-  },
-  {
-    title: "Selection",
-    desc: "Pick from our existing demos or custom design.",
-  },
-  {
-    title: "Development",
-    desc: "We build your system with clean, documented code.",
-  },
-  {
-    title: "Walkthrough",
-    desc: "Live session to explain the code and flow.",
-  },
-  {
-    title: "Documentation",
-    desc: "Helping with diagrams and report structure.",
-  },
-  {
-    title: "Support",
-    desc: "Final viva prep to help you secure an A+.",
-  },
-]
+const { process } = content
 
 export default function HowItWorks() {
   return (
     <section id="howitworks" className="py-24 bg-slate-950 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <SectionTitle
-          subtitle="The Process"
-          title="6 Steps to Your A+ Project"
+          subtitle={process.subtitle}
+          title={process.title}
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 relative">
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -z-10" />
-          {STEPS.map((step, i) => (
+          {process.steps.map((step, i) => (
             <div
               key={i}
               className="relative bg-slate-900 p-8 rounded-3xl border border-slate-800"

@@ -7,6 +7,7 @@ import Services from "../components/sections/Services"
 import Projects from "../components/sections/Projects"
 import HowItWorks from "../components/sections/HowItWorks"
 import WhyChooseUs from "../components/sections/WhyChooseUs"
+import CommitmentMissionVision from "../components/sections/CommitmentMissionVision"
 import Testimonials from "../components/sections/Testimonials"
 import About from "../components/sections/About"
 import Contact from "../components/sections/Contact"
@@ -25,6 +26,7 @@ export default function Home() {
         <Testimonials />
         <About />
         <WhyChooseUs />
+        <CommitmentMissionVision />
         <TechStack />
         <Contact />
       </main>

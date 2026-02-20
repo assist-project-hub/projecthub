@@ -1,26 +1,20 @@
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
 import SectionTitle from "../ui/SectionTitle"
+import { content } from "../../data/content"
 
-const POINTS = [
-  "Experienced developers familiar with university standards",
-  "On-time delivery so you never miss deadlines",
-  "Confidentiality and plagiarism-free work",
-  "Clear code and documentation you can explain in viva",
-  "Affordable pricing for students",
-  "Support until delivery",
-]
+const { whyChooseUs } = content
 
 export default function WhyChooseUs() {
   return (
     <section className="py-24 bg-slate-950">
       <div className="container mx-auto px-6">
         <SectionTitle
-          subtitle="Why Choose Us"
-          title="What Makes Us the Right Choice"
+          subtitle={whyChooseUs.subtitle}
+          title={whyChooseUs.title}
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {POINTS.map((point, i) => (
+          {whyChooseUs.points.map((point, i) => (
             <motion.div
               key={point}
               initial={{ opacity: 0, y: 10 }}
